@@ -2,6 +2,7 @@
 Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo que ya no aporte.
 
 ## Estado Actual
+- Repo remoto enlazado y al día: `origin` = `https://github.com/julidiviu/beneficios_tributarios_app.git`, rama `main` con upstream; commits `b6bda0f` (template) + `d933092` (layout header/footer).
 - Proyecto inicializado con Next.js (App Router), TypeScript y Tailwind CSS.
 - Arnés completo: `AGENTS.md` (con regla de leer constitución + spec activa), `MEMORY.md` y `docs/constitution.md` (6 principios).
 - Layout base global creado: `Header` (9 links, activo con `usePathname`, hamburguesa móvil), `Footer` institucional dos franjas, `ThemeToggle` propio, `Logo` provisional inline, `layout.tsx` (`lang="es"`, anti-parpadeo) y home placeholder mínima sin restos del template.
