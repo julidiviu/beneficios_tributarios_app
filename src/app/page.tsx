@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Portada provisional: se reemplazará con el contenido definitivo.
-// El módulo de la encuesta vivirá en /soy-elegible.
+// El módulo de la encuesta vivirá en /encuesta.
 export default function Home() {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col items-center px-6 py-24 text-center">
@@ -16,10 +16,10 @@ export default function Home() {
         Fuentes No Convencionales de Energía (FNCE) en Colombia.
       </p>
       <Link
-        href="/soy-elegible"
+        href="/encuesta"
         className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
       >
-        ¿Soy elegible?
+        Encuesta
       </Link>
     </section>
   );

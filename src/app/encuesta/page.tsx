@@ -1,19 +1,30 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SoyElegibleView } from "./components/SoyElegibleView";
+import { EncuestaView } from "./components/EncuestaView";
 
 export const metadata: Metadata = {
-  title: "¿Soy elegible? | Beneficios Tributarios FNCE Colombia",
+  title: "Encuesta | Beneficios Tributarios FNCE Colombia",
   description:
     "Responde 10 preguntas para conocer si tu proyecto cumple los requisitos básicos de los incentivos tributarios FNCE.",
 };
 
-export default function SoyElegiblePage() {
+export default function EncuestaPage() {
   return (
     <div>
-      <section>
-        <div className="grid items-stretch gap-6 md:grid-cols-2">
-          <div className="relative z-10 flex flex-col justify-center px-4 py-10 sm:px-6 md:-mr-16 md:py-12 lg:-mr-24 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))]">
+      <section className="relative overflow-hidden">
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image
+            src="/images/molinos.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_0%,#ffffff_38%,rgba(255,255,255,0.55)_52%,rgba(255,255,255,0)_68%)] dark:bg-[linear-gradient(to_right,#09090b_0%,#09090b_38%,rgba(9,9,11,0.55)_52%,rgba(9,9,11,0)_68%)]" />
+        </div>
+        <div className="relative z-10 mx-auto w-full max-w-[90rem] px-4 py-10 sm:px-6 md:py-14">
+          <div className="max-w-2xl">
             <p className="inline-flex w-fit items-center gap-1.5 rounded-full border border-brand-600/30 bg-brand-50 px-3 py-1 text-xs font-bold tracking-wide text-brand-700 dark:bg-brand-600/10 dark:text-brand-400">
               ENCUESTA DE ELEGIBILIDAD
             </p>
@@ -26,25 +37,11 @@ export default function SoyElegiblePage() {
               los incentivos tributarios destinados a proyectos de Fuentes No Convencionales de Energía (FNCE).
             </p>
           </div>
-          <div className="relative min-h-56 overflow-hidden md:min-h-full">
-            <Image
-              src="/images/molinos.png"
-              alt="Aerogeneradores y paneles solares en un paisaje montañoso"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-transparent dark:from-zinc-950 dark:via-zinc-950/30"
-            />
-          </div>
         </div>
       </section>
 
       <div className="pt-8">
-        <SoyElegibleView />
+        <EncuestaView />
       </div>
     </div>
   );

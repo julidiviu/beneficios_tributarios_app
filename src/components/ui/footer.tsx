@@ -2,17 +2,14 @@ import Link from "next/link";
 import { Logo } from "./logo";
 
 const COL_A = [
-  { label: "Beneficios", href: null as string | null },
-  { label: "Calculadora", href: null },
-  { label: "¿Soy elegible?", href: "/soy-elegible" },
+  { label: "FNCE", href: null as string | null },
+  { label: "Beneficios", href: null },
+  { label: "Encuesta", href: "/encuesta" },
 ];
 
 const COL_B = [
-  { label: "Guía de acceso", href: null as string | null },
-  { label: "Casos de uso", href: null },
-  { label: "Normativa", href: null },
-  { label: "Recursos", href: null },
-  { label: "Fuentes oficiales", href: null },
+  { label: "Certificación paso a paso", href: null as string | null },
+  { label: "Calculadora", href: null },
 ];
 
 function FooterLink({ label, href }: { label: string; href: string | null }) {

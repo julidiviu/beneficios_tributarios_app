@@ -2,7 +2,7 @@
 
 - **Estado:** Borrador pendiente de aprobación. Sin esta aprobación no hay código (constitución, principio 2).
 - **Alcance:** Solo tipos TypeScript y constante `PREGUNTAS_ELEGIBILIDAD` con las 10 preguntas, opciones y paneles informativos. Archivo destino: `src/data/preguntasElegibilidad.ts`.
-- **Fuera de alcance:** Reglas de resultado/elegibilidad, `PreguntaCard`, `SoyElegibleView`, persistencia en `localStorage`, pantalla de resultado. Encuesta en secuencia simple, sin etapas; el progreso se muestra como "Pregunta N de 10".
+- **Fuera de alcance:** Reglas de resultado/elegibilidad, `PreguntaCard`, `EncuestaView`, persistencia en `localStorage`, pantalla de resultado. Encuesta en secuencia simple, sin etapas; el progreso se muestra como "Pregunta N de 10".
 
 ## Requisitos generales (EARS)
 

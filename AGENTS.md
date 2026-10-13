@@ -15,18 +15,18 @@ Aplicación web interactiva en Next.js para guiar y orientar a usuarios y empres
 - **Stack:** Next.js (App Router), React, TypeScript, Tailwind CSS.
 - **Estructura de Carpetas:**
   - `src/app/layout.tsx`: Layout principal con `Header`/`Navbar` global y `Footer`.
-  - `src/app/soy-elegible/`: Ruta principal del módulo de la encuesta de elegibilidad.
-  - `src/app/soy-elegible/components/`: Componentes modulares de la encuesta (vista principal `SoyElegibleView`, componente base para renderizar preguntas, paneles informativos y botones).
+  - `src/app/encuesta/`: Ruta principal del módulo de la encuesta de elegibilidad.
+  - `src/app/encuesta/components/`: Componentes modulares de la encuesta (vista principal `EncuestaView`, componente base para renderizar preguntas, paneles informativos y botones).
   - `src/components/ui/`: Componentes comunes de la interfaz (`Header`, `Footer`, `ProgressBar`, `Button`, `Card`).
   - `specs/`: Carpeta de especificaciones SDD (`specs/001-cuestionario-elegibilidad/`).
   - `docs/`: Documentación y constitución del proyecto (`docs/constitution.md`).
 
 ## Arquitectura de UI y Reglas de Negocio de la Encuesta
 1. **Layout General:**
-   - **Navbar / Header:** Debe incluir navegación hacia: *Beneficios*, *Calculadora*, *¿Soy elegible?* (activo), *Guía de acceso*, *Casos de uso*, *Normativa*, *Recursos* y el botón hacia *Fuentes oficiales*. (El logo es el acceso al inicio; el link "Inicio" se quitó, posible retorno futuro.)
+   - **Navbar / Header:** Debe incluir navegación hacia: *FNCE*, *Beneficios*, *Encuesta* (activo), *Certificación paso a paso*, *Calculadora* y el botón hacia *Fuentes oficiales*. (El logo es el acceso al inicio; el link "Inicio" se quitó, posible retorno futuro.)
    - **Footer:** Diseñado fiel a los mockups institucionales con enlaces de navegación 
-2. **Módulo "¿Soy elegible?" (`SoyElegibleView`):**
-   - El cuestionario completo de 10 preguntas en secuencia simple (progreso "Pregunta N de 10", sin etapas) se maneja en una misma vista interactiva dentro de `/soy-elegible`.
+2. **Módulo "Encuesta" (`EncuestaView`):**
+   - El cuestionario completo de 10 preguntas en secuencia simple (progreso "Pregunta N de 10", sin etapas) se maneja en una misma vista interactiva dentro de `/encuesta`.
    - Se debe crear un **Componente Base reutilizable para las preguntas** (`PreguntaCard` / `PreguntaLayout`). Cada pregunta comparte una estructura estandarizada que contiene:
      - Título principal de la pregunta y número de paso.
      - Texto de apoyo / descripción orientativa.
