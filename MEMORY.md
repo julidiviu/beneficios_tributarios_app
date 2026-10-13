@@ -9,6 +9,12 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 - Layout hecho sin spec formal (waiver puntual: es shell, no funcionalidad); la spec arranca con la encuesta `soy-elegible`.
 - Ajuste layout: footer compacto (`py-6`, `gap-6`), sin link "Inicio" (el logo es el inicio), `not-found.tsx` propio en español dentro del layout (el 404 por defecto de Next es blanco y simulaba un cambio de tema).
 - **Logo final:** `Logo` usa `/images/Beneficios_Tributarios_LOGO.png` (36×36 con `next/image`) en header y footer.
+- **Sin etapas:** encuesta en secuencia simple con progreso "Pregunta N de 10"; spec 001 aprobada.
+- **Diccionario creado:** `src/data/preguntasElegibilidad.ts` con 3 interfaces y 10 preguntas (48 opciones, IDs `pN_opM`); `lint` + `tsc` + `build` en verde. Link "Inicio" eliminado también de `AGENTS.md` (retorno futuro posible).
+- **Spec 002 aprobada e implementada:** `/soy-elegible` con hero full-bleed (molinos.png + degradado, sin divisor), `SoyElegibleView` (memoria sin persistencia, progreso dentro de la columna 60%), `PreguntaCard` (radio nativo) e `InfoPanel` (iconos explícitos por bloque: info/documento/norma/destacado, SVG inline); tokens `brand-50`/`brand-800`.
+- **Tinta institucional:** texto en modo claro en escala `ink` (`900 #000942`, `600 #3d4675`, `400 #6a7194`); hero con padding a mitad del vacío lateral. Specs 001/002 sincronizadas; `lint` + `tsc` + `build` en verde.
+- **Scroll al cambiar de pregunta:** solo los botones lo ordenan (bandera `shouldScroll`, a prueba de `StrictMode`); al entrar/recargar siempre se muestra el hero. Hero alineado al inset de la sección 2 con leve invasión a la foto. Spec 002 sincronizada.
+- **Prueba de navegación:** script temporal verificó las 10 preguntas (títulos, 48 opciones con IDs únicos, paneles con tipo/icono, conteos de listados, textos fieles) + HTML prerenderizado de P1 (título, opción, panel, progreso, botón). Todo pasa; script eliminado.
 
 ## Decisiones (y por qué)
 - **Sin backend / Sin base de datos:** El estado de las 10 preguntas se gestionará localmente en el cliente con React state y persistencia opcional en `localStorage` para agilidad y simplicidad.

@@ -33,7 +33,7 @@ function NavLink({ item, active, stacked = false }: { item: NavItem; active: boo
       <span
         aria-disabled="true"
         title="Módulo en construcción"
-        className={`${base} cursor-not-allowed font-medium text-zinc-400 dark:text-zinc-600`}
+        className={`${base} cursor-not-allowed font-medium text-ink-400 dark:text-zinc-600`}
       >
         {item.label}
       </span>
@@ -46,7 +46,7 @@ function NavLink({ item, active, stacked = false }: { item: NavItem; active: boo
       className={`${base} font-medium transition-colors ${
         active
           ? "border-b-2 border-brand-600 text-brand-700 dark:text-brand-400"
-          : "text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white"
+          : "text-ink-600 hover:text-ink-900 dark:text-zinc-300 dark:hover:text-white"
       }`}
     >
       {item.label}
@@ -87,7 +87,7 @@ export function Header() {
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-zinc-700 hover:bg-zinc-100 lg:hidden dark:text-zinc-300 dark:hover:bg-zinc-800"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-ink-600 hover:bg-zinc-100 lg:hidden dark:text-zinc-300 dark:hover:bg-zinc-800"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
               {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}

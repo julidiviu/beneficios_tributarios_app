@@ -4,8 +4,14 @@
 
 @theme {
   /* Paleta institucional aproximada: calibrar contra mockups con hex reales. */
+  --color-brand-50: #f0fdf4;
   --color-brand-400: #4ade80;
   --color-brand-600: #16a34a;
   --color-brand-700: #15803d;
+  --color-brand-800: #0c7c3c;
+  /* Tinta institucional modo claro: base #000942 y derivados tenues. */
+  --color-ink-400: #6a7194;
+  --color-ink-600: #3d4675;
+  --color-ink-900: #000942;
   --color-navy-900: #12324f;
 }

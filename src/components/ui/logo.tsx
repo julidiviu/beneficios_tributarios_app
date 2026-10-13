@@ -12,7 +12,7 @@ export function Logo({ light = false }: { light?: boolean }) {
       />
       <span
         className={`flex flex-col leading-tight ${
-          light ? "text-white" : "text-zinc-900 dark:text-zinc-100"
+          light ? "text-white" : "text-ink-900 dark:text-zinc-100"
         }`}
       >
         <span className="text-[15px] font-bold">Beneficios Tributarios</span>

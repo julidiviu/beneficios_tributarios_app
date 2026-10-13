@@ -21,7 +21,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="Cambiar entre modo claro y oscuro"
       title="Cambiar entre modo claro y oscuro"
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-300 text-zinc-600 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-300 text-ink-600 transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
     >
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className={`${iconClass} dark:hidden`}>
         <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />

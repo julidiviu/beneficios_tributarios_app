@@ -23,10 +23,10 @@ Aplicación web interactiva en Next.js para guiar y orientar a usuarios y empres
 
 ## Arquitectura de UI y Reglas de Negocio de la Encuesta
 1. **Layout General:**
-   - **Navbar / Header:** Debe incluir navegación hacia: *Inicio*, *Beneficios*, *Calculadora*, *¿Soy elegible?* (activo), *Guía de acceso*, *Casos de uso*, *Normativa*, *Recursos* y el botón hacia *Fuentes oficiales*.
+   - **Navbar / Header:** Debe incluir navegación hacia: *Beneficios*, *Calculadora*, *¿Soy elegible?* (activo), *Guía de acceso*, *Casos de uso*, *Normativa*, *Recursos* y el botón hacia *Fuentes oficiales*. (El logo es el acceso al inicio; el link "Inicio" se quitó, posible retorno futuro.)
    - **Footer:** Diseñado fiel a los mockups institucionales con enlaces de navegación 
 2. **Módulo "¿Soy elegible?" (`SoyElegibleView`):**
-   - El cuestionario completo de 10 preguntas y 5 etapas progresivas (Proyecto, Verificación, Documentación, Perfil, Resultado) se maneja en una misma vista interactiva dentro de `/soy-elegible`.
+   - El cuestionario completo de 10 preguntas en secuencia simple (progreso "Pregunta N de 10", sin etapas) se maneja en una misma vista interactiva dentro de `/soy-elegible`.
    - Se debe crear un **Componente Base reutilizable para las preguntas** (`PreguntaCard` / `PreguntaLayout`). Cada pregunta comparte una estructura estandarizada que contiene:
      - Título principal de la pregunta y número de paso.
      - Texto de apoyo / descripción orientativa.
