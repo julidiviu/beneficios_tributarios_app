@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "./logo";
 
 const COL_A = [
-  { label: "FNCE", href: null as string | null },
+  { label: "FNCE", href: "/fnce" },
   { label: "Beneficios", href: "/beneficios" },
   { label: "Encuesta", href: "/encuesta" },
 ];

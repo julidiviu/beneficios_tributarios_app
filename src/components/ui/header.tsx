@@ -9,7 +9,7 @@ import { ThemeToggle } from "./theme-toggle";
 type NavItem = { label: string; href: string | null };
 
 const LINKS: NavItem[] = [
-  { label: "FNCE", href: null },
+  { label: "FNCE", href: "/fnce" },
   { label: "Beneficios", href: "/beneficios" },
   { label: "Encuesta", href: "/encuesta" },
   { label: "Certificación paso a paso", href: null },

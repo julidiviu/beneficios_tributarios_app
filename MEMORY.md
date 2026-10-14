@@ -40,3 +40,4 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 - **Spec 002 enmienda 1 (hero móvil + menú móvil):** encuesta con foto debajo en móvil (sin mezcla con texto) y menú que se cierra al pulsar enlace; spec actualizada; `tsc` + `lint` + `build` en verde.
 - **Spec 003 enmienda 5 (hero contenido):** foto en columna derecha (`object-center`, `sizes` 45vw, fundido solo en borde izquierdo) en vez de full-bleed; spec actualizada.
 - **Spec 003 enmienda 6 (hero al borde derecho):** foto anclada a la derecha hasta el borde (62% en `md+`, fundido al 45%) como el SVG del mockup; spec actualizada; `tsc` + `lint` + `build` en verde.
+- **FNCE hero (sin spec, waiver solo-UI):** `src/data/fnce.ts` + `src/app/fnce/page.tsx` con hero espejo de Beneficios (fade 62%/45%, `dark:`, fallback móvil) + CTA a `#accesos` + 3 tarjetas; nav header/footer FNCE desbloqueado a `/fnce`; `build` + `tsc` en verde.
