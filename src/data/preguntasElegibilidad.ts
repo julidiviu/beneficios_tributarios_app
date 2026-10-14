@@ -8,11 +8,19 @@ export interface OpcionRespuesta {
 }
 
 export interface BloqueInformativo {
-  tipo: 'texto' | 'listado' | 'texto-listado';
+  tipo: 'texto' | 'listado' | 'texto-listado' | 'pasos';
   titulo: string;
   icono?: 'info' | 'documento' | 'norma' | 'destacado';
   textoApoyo?: string;
   itemsListado?: string[];
+  pasos?: PasoInformativo[];
+  // Fondo de la tarjeta en el panel (solo presentacional; default 'neutro').
+  fondo?: 'neutro' | 'verde' | 'azul' | 'nota';
+}
+
+export interface PasoInformativo {
+  titulo: string;
+  texto: string;
 }
 
 export interface PreguntaElegibilidad {

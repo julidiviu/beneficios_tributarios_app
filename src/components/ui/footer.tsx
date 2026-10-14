@@ -3,7 +3,7 @@ import { Logo } from "./logo";
 
 const COL_A = [
   { label: "FNCE", href: null as string | null },
-  { label: "Beneficios", href: null },
+  { label: "Beneficios", href: "/beneficios" },
   { label: "Encuesta", href: "/encuesta" },
 ];
 

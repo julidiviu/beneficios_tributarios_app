@@ -12,7 +12,7 @@ export default function EncuestaPage() {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-0">
+        <div aria-hidden="true" className="absolute inset-0 hidden md:block">
           <Image
             src="/images/molinos.png"
             alt=""
@@ -36,6 +36,15 @@ export default function EncuestaPage() {
               Responde estas preguntas para conocer si tu empresa cumple con los requisitos básicos para acceder a
               los incentivos tributarios destinados a proyectos de Fuentes No Convencionales de Energía (FNCE).
             </p>
+          </div>
+          <div aria-hidden="true" className="relative mt-8 h-52 w-full md:hidden">
+            <Image
+              src="/images/molinos.png"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

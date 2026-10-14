@@ -28,3 +28,7 @@
 - [ ] P10 muestra "Ver Resultados"; el handler existe y compila.
 - [ ] Panel renderiza los 3 tipos de bloque; listados con check verde.
 - [ ] `lint` + `tsc --noEmit` + `build` en verde. Sin dependencias nuevas.
+
+## Enmiendas
+
+- **Enmienda 1 (hero móvil + menú móvil):** en móvil el hero muestra el texto sobre fondo liso con la foto debajo (`h-52`, sin imagen de fondo que se mezclaba con el texto); en `md+` sigue full-bleed. El menú móvil se cierra al pulsar un enlace (`onClick` en `NavLink`, sin efectos).

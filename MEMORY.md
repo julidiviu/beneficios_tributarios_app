@@ -34,3 +34,9 @@ Memoria del proyecto entre sesiones. Máximo ~50 líneas: resume o elimina lo qu
 ## Próximos Pasos
 - Verificación visual en `npm run dev` contra las 3 capturas (navbar, footer, página) y calibrar tokens de color.
 - Generar el borrador de la especificación inicial (`specs/001-cuestionario-elegibilidad/spec.md`) utilizando la plantilla SDD y formato EARS.
+- **Spec 003 enmienda 2 (inicia plegada):** `seleccionado` inicia en `null`; scroll al panel vía efecto (el `rAF` fallaba al primer clic porque el panel aún no existe); spec y criterios actualizados; `tsc` + `lint` + `build` en verde.
+- **Spec 003 enmienda 3 (scroll al entrar):** `scrollRestoration` en `manual` + scroll diferido + `pageshow` (la vuelta atrás/adelante restaura scroll nativo y reutiliza el árbol sin remontar); spec actualizada.
+- **Spec 003 enmienda 4 (ancla en tarjetas):** al abrir se ancla el borde superior de la sección de tarjetas (`block: "start"` + `scroll-mt-20`), no el detalle; spec actualizada.
+- **Spec 002 enmienda 1 (hero móvil + menú móvil):** encuesta con foto debajo en móvil (sin mezcla con texto) y menú que se cierra al pulsar enlace; spec actualizada; `tsc` + `lint` + `build` en verde.
+- **Spec 003 enmienda 5 (hero contenido):** foto en columna derecha (`object-center`, `sizes` 45vw, fundido solo en borde izquierdo) en vez de full-bleed; spec actualizada.
+- **Spec 003 enmienda 6 (hero al borde derecho):** foto anclada a la derecha hasta el borde (62% en `md+`, fundido al 45%) como el SVG del mockup; spec actualizada; `tsc` + `lint` + `build` en verde.

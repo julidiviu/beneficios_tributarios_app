@@ -10,7 +10,7 @@ type NavItem = { label: string; href: string | null };
 
 const LINKS: NavItem[] = [
   { label: "FNCE", href: null },
-  { label: "Beneficios", href: null },
+  { label: "Beneficios", href: "/beneficios" },
   { label: "Encuesta", href: "/encuesta" },
   { label: "Certificación paso a paso", href: null },
   { label: "Calculadora", href: null },
@@ -24,7 +24,17 @@ function BoltIcon() {
   );
 }
 
-function NavLink({ item, active, stacked = false }: { item: NavItem; active: boolean; stacked?: boolean }) {
+function NavLink({
+  item,
+  active,
+  stacked = false,
+  onNavigate,
+}: {
+  item: NavItem;
+  active: boolean;
+  stacked?: boolean;
+  onNavigate?: () => void;
+}) {
   const base = stacked ? "block px-2 py-2.5 text-[15px]" : "px-1 py-2 text-sm";
   if (!item.href) {
     return (
@@ -40,6 +50,7 @@ function NavLink({ item, active, stacked = false }: { item: NavItem; active: boo
   return (
     <Link
       href={item.href}
+      onClick={onNavigate}
       aria-current={active ? "page" : undefined}
       className={`${base} font-medium transition-colors ${
         active
@@ -55,7 +66,10 @@ function NavLink({ item, active, stacked = false }: { item: NavItem; active: boo
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const encuestaActive = pathname?.startsWith("/encuesta") ?? false;
+
+  function isActive(href: string | null) {
+    return href !== null && (pathname?.startsWith(href) ?? false);
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
@@ -66,7 +80,7 @@ export function Header() {
 
         <nav aria-label="Navegación principal" className="hidden items-center gap-5 lg:flex">
           {LINKS.map((item) => (
-            <NavLink key={item.label} item={item} active={item.href === "/encuesta" && encuestaActive} />
+            <NavLink key={item.label} item={item} active={isActive(item.href)} />
           ))}
         </nav>
 
@@ -97,7 +111,7 @@ export function Header() {
       {open && (
         <nav aria-label="Navegación móvil" className="border-t border-zinc-200 bg-white px-4 pb-4 pt-1 lg:hidden dark:border-zinc-800 dark:bg-zinc-950">
           {LINKS.map((item) => (
-            <NavLink key={item.label} item={item} stacked active={item.href === "/encuesta" && encuestaActive} />
+            <NavLink key={item.label} item={item} stacked active={isActive(item.href)} onNavigate={() => setOpen(false)} />
           ))}
           <span
             aria-disabled="true"
